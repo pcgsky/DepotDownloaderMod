@@ -11,7 +11,7 @@ https://bbs.steamtools.net/forum.php?mod=viewthread&tid=16&highlight=%E5%A4%A7%E
 
 * Update: Added `Scripts\storage_depotdownloadermod.py` to generate a bat file to download with depot keys and manifests from Many depot libraries.
 
-* Update: You can decrypt the latest manifest in [https://youxiou.com/thread-3.htm](https://youxiou.com/thread-3.htm) with [depot keys](https://github.com/SteamAutoCracks/ManifestHub/blob/main/depotkeys.json) with `Scripts\raw_manifest_name_decrypt.py`.
+* Update: You can decrypt the latest manifest in [https://youxiou.com/thread-3.htm](https://youxiou.com/thread-3.htm)
 
 ### Downloading one or all depots for an app with depot keys and manifest file
 
