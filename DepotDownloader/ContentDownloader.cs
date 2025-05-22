@@ -168,8 +168,8 @@ namespace DepotDownloader
             if (appId == INVALID_APP_ID)
                 return 0;
 
-
             var depots = GetSteam3AppSection(appId, EAppInfoSection.Depots);
+            if (depots == null) return 0; // Mod for force download
             var branches = depots["branches"];
             var node = branches[branch];
 
@@ -187,6 +187,7 @@ namespace DepotDownloader
         static uint GetSteam3DepotProxyAppId(uint depotId, uint appId)
         {
             var depots = GetSteam3AppSection(appId, EAppInfoSection.Depots);
+            if (depots == null) return INVALID_APP_ID; // Mod for force download
             var depotChild = depots[depotId.ToString()];
 
             if (depotChild == KeyValue.Invalid)
@@ -522,7 +523,8 @@ namespace DepotDownloader
                 if (depotIdsFound.Count < depotIdsExpected.Count)
                 {
                     var remainingDepotIds = depotIdsExpected.Except(depotIdsFound);
-                    throw new ContentDownloaderException(string.Format("Depot {0} not listed for app {1}", string.Join(", ", remainingDepotIds), appId));
+                    //throw new ContentDownloaderException(string.Format("Depot {0} not listed for app {1}", string.Join(", ", remainingDepotIds), appId));
+                    // Mod for force download
                 }
             }
 
