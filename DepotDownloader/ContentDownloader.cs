@@ -588,7 +588,7 @@ namespace DepotDownloader
             if (DepotKeyStore.ContainsKey(depotId))
             {
                 depotKey = DepotKeyStore.Get(depotId);
-                steam3.DepotKeys.Add(depotId,depotKey);
+                steam3.DepotKeys.Add(depotId, depotKey); 
             }
             else
             {
