@@ -593,7 +593,7 @@ namespace DepotDownloader
             else
             {
                 await steam3.RequestDepotKey(depotId, appId);
-            }            
+            }
             if (!steam3.DepotKeys.TryGetValue(depotId, out depotKey))
             {
                 Console.WriteLine("No valid depot key for {0}, unable to download.", depotId);
