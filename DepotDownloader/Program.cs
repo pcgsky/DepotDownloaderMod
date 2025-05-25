@@ -146,7 +146,7 @@ namespace DepotDownloader
                     Console.WriteLine("Warning: Unable to load filelist: {0}", ex);
                 }
             }
-            
+
             string depotKeysList = GetParameter<string>(args, "-depotkeys");
 
 
@@ -158,7 +158,7 @@ namespace DepotDownloader
                     string[] lines = depotKeysListData.Split(new char[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
 
                     DepotKeyStore.AddAll(lines);
-                    
+
                     Console.WriteLine("Using depot keys from '{0}'.", depotKeysList);
                 }
                 catch (Exception ex)
